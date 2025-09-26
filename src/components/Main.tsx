@@ -1,6 +1,6 @@
 import React from 'react'
 import big_picture from "../images/image 26.png"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import computer2 from "../computer_images/image 29.png"
 import stars from "../computer_images/Group 133.png"
 import block from "../computer_images/image 29 (2).png"
@@ -9,7 +9,7 @@ import block3 from "../computer_images/image 29 (3).png"
 import block4 from "../computer_images/image 29 (4).png"
 function Main() {
   type ComputerType = {
-    img: any,
+    img: StaticImageData,
     reviews: number,
     name: string,
     oldprice: string,
