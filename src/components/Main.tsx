@@ -72,9 +72,9 @@ function Main() {
           <h1 className='text-4xl mt-8 font-bold'>New Products</h1>
           <div className='grid grid-cols-1 gap-3 py-5 sm:grid-cols-3 md:grid-cols-6'>
             {
-              computer.map(el => (
-                <div className='min-h-[400px]  hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'>
-                  <div className='p-4 '>
+              computer.map((el, index) => (
+                <div key={index} className='min-h-[400px]  hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'>
+                  <div key={index} className='p-4 '>
                     <div className='p-5'>
                       <Image src={el.img} alt='' className='w-[220px] hover:scale-[1.2] duration-300 h-[150px] object-cover object-center'></Image>
                     </div>
