@@ -19,14 +19,14 @@ function Navbar() {
                             <div className='flex justify-center items-center gap-2'>
                                 <h1 className='font-bold text-white'>Call Us: (00) 1234 5678</h1>
                                 <div className='flex gap-1'>
-                                    <Image src={facebook} alt=''></Image>
-                                    <Image src={insta} alt=''></Image>
+                                    <Image src={facebook} alt='' className='hover:scale-[1.2] duration-200'></Image>
+                                       <Image src={insta} alt='' className='hover:scale-[1.2] duration-200'></Image>
                                 </div>
                             </div>
                         </nav>
                     </div>
                 </section>
-                <section>
+                <section className='shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] bg-container'>
                     <div className='container '>
                         <nav className='py-5 flex justify-between'>
                             <div className='flex items-center gap-10'>
@@ -39,13 +39,13 @@ function Navbar() {
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>PC Parts</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>All Other Products</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Repairs</button>
-                                    <button className='py-3 cursor-pointer px-6 border-2 rounded-4xl font-bold text-blue-700 border-blue-700  '>Our Deals</button>
+                                    <button className='py-3 cursor-pointer px-6 border-2 rounded-4xl font-bold text-blue-700 border-blue-700  hover:bg-blue-700 duration-200 hover:text-white'>Our Deals</button>
                                 </div>
                             </div>
                             <div className='flex gap-3 items-center'>
-                                <Image src={search} alt=''></Image>
-                                <Image src={cart} alt=''></Image>
-                                <Image src={person} alt=''></Image>
+                                <Image src={search} alt='' className='hover:scale-[1.2] duration-200'></Image>
+                                  <Image src={cart} alt='' className='hover:scale-[1.2] duration-200'></Image>
+                                <Image src={person} alt='' className='hover:scale-[1.2] duration-200'></Image>
                             </div>
                         </nav>
                     </div>
