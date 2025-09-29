@@ -31,6 +31,22 @@ import monitor from "../msi_monitors/image 29.png"
 import monitor1 from "../msi_monitors/image 29 (1).png"
 import monitor2 from "../msi_monitors/image 29 (2).png"
 import monitor3 from "../msi_monitors/image 29 (3).png"
+import brend from "../brends_images/image 33.png"
+import brend1 from "../brends_images/image 33 (2).png"
+import brend2 from "../brends_images/image 33 (3).png"
+import brend3 from "../brends_images/image 33 (4).png"
+import brend4 from "../brends_images/image 33 (5).png"
+import brend5 from "../brends_images/image 33 (6).png"
+import brend6 from "../brends_images/image 33 (1).png"
+import img from "../just_images/image 29 (12).png"
+import img1 from "../just_images/image 29 (14).png"
+import img2 from "../just_images/image 29 (15).png"
+import img3 from "../just_images/image 29 (4).png"
+import img4 from "../just_images/image 29 (5).png"
+import img5 from "../just_images/image 29 (6).png"
+import img6 from "../just_images/image 29 (7).png"
+import img7 from "../just_images/image 29 (8).png"
+import img8 from "../just_images/image 29 (9).png"
 function Main() {
   type ComputerType = {
     img: StaticImageData,
@@ -116,7 +132,7 @@ function Main() {
       newprice: "490.00"
     },
     {
-      img:msi,
+      img: msi,
       reviews: 4,
       name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       oldprice: "490.00",
@@ -219,7 +235,7 @@ function Main() {
       newprice: "490.00"
     },
     {
-      img:  monitor3,
+      img: monitor3,
       reviews: 4,
       name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
       oldprice: "490.00",
@@ -422,13 +438,13 @@ function Main() {
             </div>
           </div>
           <div>
-           
+
             <div className='grid grid-cols-1 gap-3 py-5 sm:grid-cols-3 md:grid-cols-6'>
               <div className="min-h-[400px] relative hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl overflow-hidden">
                 <Image src={culler4} alt='' className="absolute w-full h-full object-cover object-center rounded-2xl" />
                 <div className="absolute inset-0 flex flex-col gap-15 items-center text-center justify-center z-10">
                   <h1 className="text-white text-3xl cursor-pointer font-bold  p-2 rounded">
-                    Gaming<br/>Monitors
+                    Gaming<br />Monitors
                   </h1>
                   <p className='text-gray-400 border-b-2 hover:text-blue-700 hover:border-blue-700 transition-all duration-200 cursor-pointer' >See All Products</p>
                 </div>
@@ -461,6 +477,96 @@ function Main() {
                 ))
               }
             </div>
+          </div>
+        </section>
+        <section>
+          <div className='flex  gap-20 justify-center'>
+            <Image src={brend} alt='' className=''></Image>
+            <Image src={brend1} alt='' className=''></Image>
+            <Image src={brend2} alt='' className=''></Image>
+            <Image src={brend3} alt='' className=''></Image>
+            <Image src={brend4} alt='' className=''></Image>
+            <Image src={brend5} alt='' className=''></Image>
+            <Image src={brend6} alt='' className=''></Image>
+          </div>
+        </section>
+        <section>
+          <div className='grid py-8 grid-cols-6 gap-3 '>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img1} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img2} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img3} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img4} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img5} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img6} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img7} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+            <div className=' min-h-[300px]'>
+              <div>
+                <Image src={img8} alt='' className='w-full h-full object-cover object-center' ></Image>
+              </div>
+              <div className='text-center '>
+                <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
