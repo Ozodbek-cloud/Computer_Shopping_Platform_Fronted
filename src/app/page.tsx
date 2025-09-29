@@ -8,7 +8,6 @@ function page() {
     <div>
       <Navbar/>
       <Main/>
-      <Footer/>
     </div>
   )
 }

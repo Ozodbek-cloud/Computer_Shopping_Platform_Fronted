@@ -47,6 +47,8 @@ import img5 from "../just_images/image 29 (6).png"
 import img6 from "../just_images/image 29 (7).png"
 import img7 from "../just_images/image 29 (8).png"
 import img8 from "../just_images/image 29 (9).png"
+import img_chotkiy from "../just_images/Group 63.png"
+import Footer from './Footer'
 function Main() {
   type ComputerType = {
     img: StaticImageData,
@@ -481,13 +483,13 @@ function Main() {
         </section>
         <section>
           <div className='flex  gap-20 justify-center'>
-            <Image src={brend} alt='' className=''></Image>
-            <Image src={brend1} alt='' className=''></Image>
-            <Image src={brend2} alt='' className=''></Image>
-            <Image src={brend3} alt='' className=''></Image>
-            <Image src={brend4} alt='' className=''></Image>
-            <Image src={brend5} alt='' className=''></Image>
-            <Image src={brend6} alt='' className=''></Image>
+            <Image src={brend} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend1} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend2} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend3} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend4} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend5} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
+            <Image src={brend6} alt='' className=' hover:scale-[1.2] transition-all duration-200 cursor-pointer'></Image>
           </div>
         </section>
         <section>
@@ -566,10 +568,32 @@ function Main() {
                 <h1>If you’ve recently made a<br />desktop PC or laptop<br />purchase, you might want to<br />consider adding peripherals to<br />enhance your home office<br />setup, your<br />gaming rig, or your business workspace...</h1>
               </div>
             </div>
+          </div>
+        </section>
+        <section className=''>
+          <div className='  flex items-center justify-center py-5'>
+            <div className=' bg-[#f6f6ff]  p-10  '>
+              <div className='flex gap-3'>
+                <h1 className='text-8xl font-bold'>‘’</h1>
+                <div>
+                  <h1 className='text-2xl'>My first order arrived today in perfect condition.  From the time I sent a question about the item to making the<br />purchase, to the shipping and now the delivery, your company, Tecs, has<br />stayed in touch.  Such great service.  I look forward to shopping on your site in the future and<br />would highly recommend it.</h1>
+                </div>
+              </div>
+              <div className='mt-5 flex justify-end'>
+                <h1 className='font-bold'>- Tama Brown</h1>
+              </div>
+              <div className='flex mt-5 justify-between items-center'>
+                <button className='text-blue-600 hover:bg-blue-600 hover:text-white hover:border-white transition-all duration-200 font-bold border-2 border-blue-600 rounded-4xl py-2 px-5'>Leave Us A Review</button>
+                <Image src={img_chotkiy} alt=''></Image>
+              </div>
+            </div>
 
           </div>
         </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
