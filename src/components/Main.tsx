@@ -1,5 +1,5 @@
 import React from 'react'
-import big_picture from "../images/image 26.png"
+import big_picture from "../images/DIK.png"
 import Image, { StaticImageData } from 'next/image'
 import computer2 from "../computer_images/image 29.png"
 import stars from "../computer_images/Group 133.png"
@@ -262,9 +262,8 @@ function Main() {
     <div>
       <main className='container'>
         <section>
-          <div className=" border">
-            <Image src={big_picture} alt="picture" className="w-full h-full object-cover object-center" />
-          </div>
+          <div className="w-full h-full min-h-88 bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${big_picture.src})` }}> </div>
+
         </section>
         <section>
           <h1 className='text-4xl mt-8 font-bold'>New Products</h1>
