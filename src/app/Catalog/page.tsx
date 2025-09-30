@@ -1,7 +1,8 @@
+'use client'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import Image, { StaticImageData } from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import img from "../../computer_blocks_imges/idk.png"
 import computer2 from "../../computer_images/image 29.png"
 import stars from "../../computer_images/Group 133.png"
@@ -16,9 +17,15 @@ import brend2 from "../../brends_images/image 33 (3).png"
 import brend3 from "../../brends_images/image 33 (4).png"
 import brend4 from "../../brends_images/image 33 (5).png"
 import brend5 from "../../brends_images/image 33 (6).png"
-import brend6 from "../../brends_images/image 33 (1).png"
 import stol from "../../brends_images/image 49.png"
+import { useRouter } from 'next/navigation'
+import square from "../../img/Group 201.png"
+import row from "../../img/Group 202.png"
+import square_active from "../../img/Group 201 (1).png"
+import row_active from "../../img/Group 202 (1).png"
 function page() {
+  const navigate = useRouter()
+  const [active, setActive] = useState("square")
   type ComputerType = {
     img: StaticImageData,
     reviews: number,
@@ -166,7 +173,7 @@ function page() {
           <div className=''>
             <h1 className='text-3xl  font-bold'>MSI PS Series (20)</h1>
             <div className="flex items-center justify-between gap-4  rounded-2xl p-3 shadow-sm bg-white">
-              <button className="px-6 py-2 rounded-xl border border-gray-300 text-gray-600 hover:bg-gray-100 transition">
+              <button onClick={() => navigate.push('/')} className="px-6 py-2 rounded-xl border border-gray-300 text-gray-600 hover:bg-gray-100 transition">
                 Back
               </button>
 
@@ -208,6 +215,11 @@ function page() {
                     <option value="50">50 per page</option>
                     <option value="100">100 per page</option>
                   </select>
+                </div>
+
+                <div className='flex gap-3'>
+                  <Image onClick={() => setActive("square")} src={active == 'square' ? square : square_active} alt='' className='hover:scale-[1.2] transition-all duration-200'></Image>
+                  <Image onClick={() => setActive("row")} src={active == 'row' ? row_active : row} alt='' className='hover:scale-[1.2] transition-all duration-200'></Image>
                 </div>
               </div>
 
@@ -295,39 +307,68 @@ function page() {
           </aside>
 
           <div className="flex-1">
-            <div className='grid grid-cols-1 gap-6 py-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
-              {computer.map((el, index) => (
-                <div
-                  key={index}
-                  className='min-h-[400px] cursor-pointer hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'
-                >
-                  <div className='p-4'>
-                    <div className='flex gap-2 items-center'>
-                      <Image src={tick} alt='' />
-                      <h1 className='text-green-500'>In Stock</h1>
-                    </div>
-                    <div className='p-5 flex justify-center'>
-                      <Image
-                        src={el.img}
-                        alt=''
-                        className='w-[220px] h-[150px] object-contain hover:scale-[1.2] duration-300'
-                      />
-                    </div>
-                    <div className='flex gap-2 mt-2 items-center justify-start'>
-                      <Image src={stars} alt='' />
-                      <p className='font-bold text-gray-600'>Reviews ({el.reviews})</p>
-                    </div>
-                    <div className='mt-1 flex flex-col justify-start items-start gap-4'>
-                      <h1 className='text-gray-700'>{el.name}</h1>
-                      <div>
-                        <p className='line-through font-bold text-gray-500'>$ {el.oldprice}</p>
-                        <p className='font-bold text-2xl'>$ {el.newprice}</p>
+            {
+              active == 'square' ?
+                (<div className='grid grid-cols-1 gap-6 py-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
+                  {computer.map((el, index) => (
+                    <div key={index} className='min-h-[400px] cursor-pointer hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'>
+                      <div className='p-4'>
+                        <div className='flex gap-2 items-center'>
+                          <Image src={tick} alt='' />
+                          <h1 className='text-green-500'>In Stock</h1>
+                        </div>
+                        <div className='p-5 flex justify-center'>
+                          <Image src={el.img} alt='' className='w-[220px] h-[150px] object-contain hover:scale-[1.2] duration-300' />
+                        </div>
+                        <div className='flex gap-2 mt-2 items-center justify-start'>
+                          <Image src={stars} alt='' />
+                          <p className='font-bold text-gray-600'>Reviews ({el.reviews})</p>
+                        </div>
+                        <div className='mt-1 flex flex-col justify-start items-start gap-4'>
+                          <h1 className='text-gray-700'>{el.name}</h1>
+                          <div>
+                            <p className='line-through font-bold text-gray-500'>$ {el.oldprice}</p>
+                            <p className='font-bold text-2xl'>$ {el.newprice}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  ))}
+                </div>)
+                :
+                (
+                  <div className='grid grid-cols-1 py-5 gap-6  sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1'>
+                    {computer.map((el, index) => (
+                      <div key={index} className='min-h-[300px]  cursor-pointer hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'>
+                        <div className='p-4 flex  '>
+                          <div>
+                            <div className='flex gap-2  items-center'>
+                              <Image src={tick} alt='' />
+                              <h1 className='text-green-500'>In Stock</h1>
+                            </div>
+                            <div className='p-5 flex justify-center items-center'>
+                              <Image src={el.img} alt='' className='w-[220px] mt-5 h-[150px] object-contain scale-[1.5] hover:scale-[1.2] duration-300' />
+                            </div>
+                          </div>
+                          <div className='flex justify-center mt-5 flex-col'>
+                            <div className='flex gap-2 mt-2 items-center justify-start'>
+                              <Image src={stars} alt='' />
+                              <p className='font-bold text-gray-600'>Reviews ({el.reviews})</p>
+                            </div>
+                            <div className='mt-1 flex flex-col justify-start items-start gap-4'>
+                              <h1 className='text-gray-700'>{el.name}</h1>
+                              <div>
+                                <p className='line-through font-bold text-gray-500'>$ {el.oldprice}</p>
+                                <p className='font-bold text-2xl'>$ {el.newprice}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
-            </div>
+                )
+            }
 
 
             <div className="flex justify-center items-center gap-2 mt-6">

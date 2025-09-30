@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import big_picture from "../images/DIK.png"
 import Image, { StaticImageData } from 'next/image'
@@ -49,7 +50,9 @@ import img7 from "../just_images/image 29 (8).png"
 import img8 from "../just_images/image 29 (9).png"
 import img_chotkiy from "../just_images/Group 63.png"
 import Footer from './Footer'
+import { useRouter } from 'next/navigation'
 function Main() {
+   const navigate = useRouter()
   type ComputerType = {
     img: StaticImageData,
     reviews: number,

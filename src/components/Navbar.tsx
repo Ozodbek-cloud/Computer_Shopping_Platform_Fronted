@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import facebook from "../images/ant-design_facebook-filled.png"
@@ -6,8 +7,9 @@ import logo from "../images/1.png"
 import cart from "../images/jam_shopping-cart.png"
 import search from "../images/gg_search.png"
 import person from "../images/Ellipse 8.png"
-
+import { useRouter } from 'next/navigation'
 function Navbar() {
+    const navigate = useRouter()
     return (
         <div>
             <header>
@@ -39,7 +41,7 @@ function Navbar() {
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>PC Parts</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>All Other Products</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Repairs</button>
-                                    <button className='py-3 cursor-pointer px-6 border-2 rounded-4xl font-bold text-blue-700 border-blue-700  hover:bg-blue-700 duration-200 hover:text-white'>Our Deals</button>
+                                    <button onClick={() => navigate.push('Catalog')} className='py-3 cursor-pointer px-6 border-2 rounded-4xl font-bold text-blue-700 border-blue-700  hover:bg-blue-700 duration-200 hover:text-white'>Our Deals</button>
                                 </div>
                             </div>
                             <div className='flex gap-3 items-center'>
