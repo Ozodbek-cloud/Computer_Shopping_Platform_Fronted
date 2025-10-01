@@ -24,6 +24,9 @@ import row from "../../img/Group 202.png"
 import square_active from "../../img/Group 201 (1).png"
 import row_active from "../../img/Group 202 (1).png"
 function page() {
+  const colors = ["#000000", "#DB0000",];
+  const [selected, setSelected] = useState(0);
+
   const navigate = useRouter()
   const [active, setActive] = useState("square")
   type ComputerType = {
@@ -272,7 +275,23 @@ function page() {
 
               <div>
                 <h3 className="font-semibold text-gray-900 mb-3">Color</h3>
-                <input type="color" className="w-12 h-12 cursor-pointer rounded-lg border border-gray-300" />
+                <div style={{ display: "flex", gap: 12, alignItems: "center", padding: 12 }}>
+                  {colors.map((c, i) => (
+                    <div
+                      key={i}
+                      onClick={() => setSelected(i)}
+                      style={{
+                        width: 24,
+                        height: 24,
+                        borderRadius: "50%",
+                        background: c,
+                        border: i === selected ? "3px solid #2563eb" : "3px solid transparent",
+                        boxSizing: "border-box",
+                        cursor: "pointer",
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
 
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition-colors">
