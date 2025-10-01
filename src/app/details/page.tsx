@@ -14,7 +14,7 @@ import img2 from "../../img_img/image 17.png"
 import img3 from "../../img_img/image 18.png"
 import img4 from "../../img_img/image 19.png"
 import img5 from "../../img_img/image 22.png"
-function page() {
+function Page() {
     const colors = ["#6b21a8", "#f3f4f6", "#e5e7eb"];
     const [selected, setSelected] = useState(0);
     const [active, setActive] = useState("about")
@@ -247,4 +247,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

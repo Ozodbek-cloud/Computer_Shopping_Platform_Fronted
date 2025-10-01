@@ -23,7 +23,7 @@ import square from "../../img/Group 201.png"
 import row from "../../img/Group 202.png"
 import square_active from "../../img/Group 201 (1).png"
 import row_active from "../../img/Group 202 (1).png"
-function page() {
+function Page() {
   const colors = ["#000000", "#DB0000",];
   const [selected, setSelected] = useState(0);
 
@@ -405,4 +405,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
