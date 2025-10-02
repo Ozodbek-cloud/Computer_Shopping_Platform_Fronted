@@ -17,7 +17,7 @@ function Navbar() {
                     <div className='container  py-3'>
                         <nav className='flex justify-between'>
                             <h1><span className='font-bold text-gray-600'>Mon-Thu:</span> <span className='font-bold text-white'>9:00 AM - 5:30 PM</span></h1>
-                            <h1 className='font-bold text-gray-600'>Visit our showroom in 1234 Street Adress City Address, 1234  <span className='font-bold ml-2 text-white border-b-2 hover:text-blue-700 hover:border-blue-700 transition-all duration-200 cursor-pointer'>Contact Us</span></h1>
+                            <h1 className='font-bold text-gray-600'>Visit our showroom in 1234 Street Adress City Address, 1234  <span onClick={() => navigate.push('contact')} className='font-bold ml-2 text-white border-b-2 hover:text-blue-700 hover:border-blue-700 transition-all duration-200 cursor-pointer'>Contact Us</span></h1>
                             <div className='flex justify-center items-center gap-2'>
                                 <h1 className='font-bold text-white'>Call Us: (00) 1234 5678</h1>
                                 <div className='flex gap-1'>
