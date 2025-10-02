@@ -46,7 +46,7 @@ function Navbar() {
                             </div>
                             <div className='flex gap-3 items-center'>
                                 <Image src={search} alt='' className='hover:scale-[1.2] duration-200'></Image>
-                                  <Image src={cart} alt='' className='hover:scale-[1.2] duration-200'></Image>
+                                  <Image onClick={() => navigate.push('cart')} src={cart} alt='' className='hover:scale-[1.2] duration-200'></Image>
                                 <Image src={person} alt='' className='hover:scale-[1.2] duration-200'></Image>
                             </div>
                         </nav>

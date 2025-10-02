@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.2.6",
     "flyonui": "^2.4.1",
+    "framer-motion": "^12.23.22",
     "install": "^0.13.0",
     "lucide-react": "^0.544.0",
     "next": "15.5.4",
