@@ -359,7 +359,7 @@ function Page() {
                   <div className='grid grid-cols-1 py-5 gap-6  sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1'>
                     {computer.map((el, index) => (
                       <div key={index} className='min-h-[300px]  cursor-pointer hover:shadow-[0px_4px_6px_10px_rgba(0,_0,_0,_0.1)] duration-200 rounded-2xl'>
-                        <div className='p-4 flex  '>
+                        <div className='p-4 flex items-center  '>
                           <div>
                             <div className='flex gap-2  items-center'>
                               <Image src={tick} alt='' />
@@ -381,6 +381,24 @@ function Page() {
                                 <p className='font-bold text-2xl'>$ {el.newprice}</p>
                               </div>
                             </div>
+                          </div>
+                          <div className="w-full max-w-md bg-white border border-gray-200 rounded-md shadow-sm">
+                            <table className="w-full text-sm text-left text-gray-700">
+                              <tbody>
+                                <tr className="border-b border-gray-200">
+                                  <th className="px-4 py-2 font-medium text-gray-500">CPU</th>
+                                  <td className="px-4 py-2 text-gray-600">N/A</td>
+                                </tr>
+                                <tr className="bg-gray-50 border-b border-gray-200">
+                                  <th className="px-4 py-2 font-medium text-gray-500">Featured</th>
+                                  <td className="px-4 py-2 text-gray-600">N/A</td>
+                                </tr>
+                                <tr>
+                                  <th className="px-4 py-2 font-medium text-gray-500">I/O Ports</th>
+                                  <td className="px-4 py-2 text-gray-600">N/A</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       </div>

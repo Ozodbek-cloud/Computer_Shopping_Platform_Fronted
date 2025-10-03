@@ -39,15 +39,15 @@ function Navbar() {
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Networking Devices</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Printers & Scanners</button>
                                     <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>PC Parts</button>
-                                    <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>All Other Products</button>
-                                    <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Repairs</button>
+                                        <button className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>Repairs</button>
+                                    <button onClick={() => navigate.push('about_us')} className='py-3 cursor-pointer px-6 border-2 border-white rounded-4xl font-bold hover:text-blue-700 hover:border-blue-700 transition-all duration-200'>About Us</button>
                                     <button onClick={() => navigate.push('catalog')} className='py-3 cursor-pointer px-6 border-2 rounded-4xl font-bold text-blue-700 border-blue-700  hover:bg-blue-700 duration-200 hover:text-white'>Our Deals</button>
                                 </div>
                             </div>
                             <div className='flex gap-3 items-center'>
                                 <Image src={search} alt='' className='hover:scale-[1.2] duration-200'></Image>
                                   <Image onClick={() => navigate.push('cart')} src={cart} alt='' className='hover:scale-[1.2] duration-200'></Image>
-                                <Image src={person} alt='' className='hover:scale-[1.2] duration-200'></Image>
+                                <Image onClick={() => navigate.push('profile')} src={person} alt='' className='hover:scale-[1.2] duration-200'></Image>
                             </div>
                         </nav>
                     </div>
